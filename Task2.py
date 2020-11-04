@@ -1,21 +1,23 @@
 def is_prime(num):
     if num > 1:
-            if (num % 2) == 0:
-             print("No, the number isn't prime.\n")
-            else:
-             print("Yes, the number is prime.\n")
+        for i in range (2,num):
+            if (num % i) == 0:
+                print(num," isn't a prime number.\n")
+                break
+        else:
+            print(num," is a prime number.\n")
     else:
-        print("No, the number isn't prime.\n")
+        print(num," isn't a prime number.\n")
     show_menu()
     return num
 
 def is_palindrome():
      word = input("Enter the word you want to check\n")
      if word == word[::-1]:
-       print("Yes")
+       print("Yes",word," is palindrome")
        show_menu()
      else:
-       print("No")
+       print("No",word," isn't palindrome")
        show_menu()
      return()
 
