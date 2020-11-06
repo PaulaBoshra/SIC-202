@@ -1,0 +1,18 @@
+def turn_right():
+    repeat(turn_left,3)
+
+def turn_back():
+    repeat(turn_left,2)
+
+def Check():
+    if front_is_clear():
+        move()
+    elif not front_is_clear() and left_is_clear():
+        turn_left()
+    elif not front_is_clear() and not left_is_clear():
+        turn_right()
+    elif not front_is_clear() and not left_is_clear() and not right_is_clear():
+        turn_back()
+
+repeat(Check,100)
+turn_off()
