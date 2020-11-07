@@ -89,7 +89,7 @@ def tie():
     f = 400
     surfacedisplay = pygame.display.set_mode((e, f))
     fonttt = pygame.font.Font('freesansbold.ttf', 30)
-    texttt = fonttt.render('No winner, play again', True, green, blackkk)
+    texttt = fonttt.render('No winners, play again', True, green, blackkk)
     rectttext = texttt.get_rect()
     rectttext.center = (e // 2, f // 2)
     surfacedisplay.fill(whiteee)
