@@ -60,46 +60,54 @@ while run:
             if f1.collidepoint(pos) and f1_empty is True:
                 click = click + 1
                 if player == 1:
-                    pygame.draw.rect(win, (255, 255, 0), (50, 50, 100, 100))
+                    pygame.draw.line(win, (255, 255, 0), (50, 50), (150, 150), 10)
+                    pygame.draw.line(win, (255, 255, 0), (50, 150), (150, 50), 10)
                     player = 2
                     f1_empty = False
                 else:
-                    pygame.draw.circle(win, (255, 0, 0), (100, 100), 50)
+                    pygame.draw.circle(win, (255, 0, 0), (100, 100), 60)
+                    pygame.draw.circle(win, (0, 0, 0), (100, 100), 55)
                     player = 1
                     f1_empty = False
 
             if s1.collidepoint(pos) and s1_empty is True:
                 click = click + 1
                 if player == 1:
-                    pygame.draw.rect(win, (255, 255, 0), (225, 50, 100, 100))
+                    pygame.draw.line(win, (255, 255, 0), (225, 50), (325, 150), 10)
+                    pygame.draw.line(win, (255, 255, 0), (225, 150), (325, 50), 10)
                     player = 2
                     s1_empty = False
                 else:
                     player = 1
-                    pygame.draw.circle(win, (255, 0, 0), (275, 100), 50)
+                    pygame.draw.circle(win, (255, 0, 0), (275, 100), 60)
+                    pygame.draw.circle(win, (0, 0, 0), (275, 100), 55)
                     s1_empty = False
 
             if t1.collidepoint(pos) and t1_empty is True:
                 click = click + 1
                 if player == 1:
-                    pygame.draw.rect(win, (255, 255, 0), (400, 50, 100, 100))
+                    pygame.draw.line(win, (255, 255, 0), (400, 50), (500, 150), 10)
+                    pygame.draw.line(win, (255, 255, 0), (400, 150), (500, 50), 10)
                     player = 2
                     t1_empty = False
                 else:
                     player = 1
-                    pygame.draw.circle(win, (255, 0, 0), (450, 100), 50)
+                    pygame.draw.circle(win, (255, 0, 0), (450, 100), 60)
+                    pygame.draw.circle(win, (0, 0, 0), (450, 100), 55)
                     t1_empty = False
 
             if f2.collidepoint(pos) and f2_empty is True:
                 click = click + 1
                 if player == 1:
                     player = 2
-                    pygame.draw.rect(win, (255, 255, 0), (50, 225, 100, 100))
+                    pygame.draw.line(win, (255, 255, 0), (50, 225), (150, 325), 10)
+                    pygame.draw.line(win, (255, 255, 0), (50, 325), (150, 225), 10)
                     f2_empty = False
 
                 else:
                     player = 1
-                    pygame.draw.circle(win, (255, 0, 0), (100, 275), 50)
+                    pygame.draw.circle(win, (255, 0, 0), (100, 275), 60)
+                    pygame.draw.circle(win, (0, 0, 0), (100, 275), 55)
                     f2_empty = False
 
             if s2.collidepoint(pos) and s2_empty is True:
@@ -107,58 +115,68 @@ while run:
                 if player == 1:
                     player = 2
                     s2_empty = False
-                    pygame.draw.rect(win, (255, 255, 0), (225, 225, 100, 100))
+                    pygame.draw.line(win, (255, 255, 0), (225, 225), (325, 325), 10)
+                    pygame.draw.line(win, (255, 255, 0), (225, 325), (325, 225), 10)
 
                 else:
                     player = 1
-                    pygame.draw.circle(win, (255, 0, 0), (275, 275), 50)
+                    pygame.draw.circle(win, (255, 0, 0), (275, 275), 60)
+                    pygame.draw.circle(win, (0, 0, 0), (275, 275), 55)
                     s2_empty = False
 
             if t2.collidepoint(pos) and t2_empty is True:
                 click = click + 1
                 if player == 1:
                     player = 2
-                    pygame.draw.rect(win, (255, 255, 0), (400, 225, 100, 100))
+                    pygame.draw.line(win, (255, 255, 0), (400, 225), (500, 325), 10)
+                    pygame.draw.line(win, (255, 255, 0), (400, 325), (500, 225), 10)
                     t2_empty = False
                 else:
                     player = 1
-                    pygame.draw.circle(win, (255, 0, 0), (450, 275), 50)
+                    pygame.draw.circle(win, (255, 0, 0), (450, 275), 60)
+                    pygame.draw.circle(win, (0, 0, 0), (450, 275), 55)
                     t2_empty = False
 
             if f3.collidepoint(pos) and f3_empty is True:
                 click = click + 1
                 if player == 1:
                     player = 2
-                    pygame.draw.rect(win, (255, 255, 0), (50, 400, 100, 100))
+                    pygame.draw.line(win, (255, 255, 0), (50, 400), (150, 500), 10)
+                    pygame.draw.line(win, (255, 255, 0), (50, 500), (150, 400), 10)
                     f3_empty = False
 
                 else:
                     player = 1
-                    pygame.draw.circle(win, (255, 0, 0), (100, 450), 50)
+                    pygame.draw.circle(win, (255, 0, 0), (100, 450), 60)
+                    pygame.draw.circle(win, (0, 0, 0), (100, 450), 55)
                     f3_empty = False
 
             if s3.collidepoint(pos) and s3_empty is True:
                 click = click + 1
                 if player == 1:
                     player = 2
-                    pygame.draw.rect(win, (255, 255, 0), (225, 400, 100, 100))
+                    pygame.draw.line(win, (255, 255, 0), (225, 400), (325, 500), 10)
+                    pygame.draw.line(win, (255, 255, 0), (225, 500), (325, 400), 10)
                     s3_empty = False
 
                 else:
                     player = 1
-                    pygame.draw.circle(win, (255, 0, 0), (275, 450), 50)
+                    pygame.draw.circle(win, (255, 0, 0), (275, 450), 60)
+                    pygame.draw.circle(win, (0, 0, 0), (275, 450), 55)
                     s3_empty = False
 
             if t3.collidepoint(pos) and t3_empty is True:
                 click = click + 1
                 if player == 1:
                     player = 2
-                    pygame.draw.rect(win, (255, 255, 0), (400, 400, 100, 100))
+                    pygame.draw.line(win, (255, 255, 0), (400, 400), (500, 500), 10)
+                    pygame.draw.line(win, (255, 255, 0), (400, 500), (500, 400), 10)
                     t3_empty = False
 
                 else:
                     player = 1
-                    pygame.draw.circle(win, (255, 0, 0), (450, 450), 50)
+                    pygame.draw.circle(win, (255, 0, 0), (450, 450), 60)
+                    pygame.draw.circle(win, (0, 0, 0), (450, 450), 55)
                     t3_empty = False
 
             if click == 9:
