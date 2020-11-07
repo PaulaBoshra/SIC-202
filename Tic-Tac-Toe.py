@@ -50,6 +50,8 @@ ar = [[0, 0, 0],
       [0, 0, 0],
       [0, 0, 0]]
 
+game = 0
+
 
 def winner_1():
     white = (255, 255, 255)
@@ -96,8 +98,47 @@ def tie():
     surfacedisplay.blit(texttt, rectttext)
 
 
-# loop to run the program
-while run:
+def is_wining():
+    for x in range(3):
+        winner = 0
+        for y in range(3):
+            winner = winner + ar[x - 1][y - 1]
+            if winner == 3:
+                winner_1()
+            elif winner == -3:
+                winner_2()
+    for x in range(3):
+        winner = 0
+        for y in range(3):
+            winner = winner + ar[y - 1][x - 1]
+            if winner == 3:
+                winner_1()
+            elif winner == -3:
+                winner_2()
+    d = 0
+    for x in range(3):
+        d = d + ar[x - 1][x - 1]
+        if d == 3:
+            winner_1()
+        elif d == -3:
+            winner_2()
+    d = 0
+    y = 2
+    xp = 0
+    for x in range(3):
+        d = d + ar[xp][y]
+        xp += 1
+        y -= 1
+        if d == 3:
+            winner_1()
+        elif d == -3:
+            winner_2()
+    if click == 9:
+        tie()
+
+
+def insert():
+    global run, f1_empty, click, player, s1_empty, t1_empty, f2_empty, s2_empty, t2_empty, f3_empty, s3_empty, t3_empty
     # wait time at the start of each loop to prevent overlapping 1 second
     pygame.time.delay(100)
     # loop to  check for mouse click or closing window
@@ -247,40 +288,15 @@ while run:
                     t3_empty = False
                     ar[2][2] = -1
 
-            if click == 9:
-                tie()
+            is_wining()
 
-            for x in range(3):
-                winner = 0
-                for y in range(3):
-                    winner = winner + ar[x-1][y-1]
-                    if winner == 3:
-                        winner_1()
-                    elif winner == -3:
-                        winner_2()
-            for x in range(3):
-                winner = 0
-                for y in range(3):
-                    winner = winner + ar[y-1][x-1]
-                    if winner == 3:
-                        winner_1()
-                    elif winner == -3:
-                        winner_2()
-            d = 0
-            for x in range(3):
-                d = d + ar[x-1][x-1]
-                if d == 3:
-                    winner_1()
-                elif d == -3:
-                    winner_2()
-            for x in range(3):
-                y = -1
-                y += 1
-                d = d + ar[x-1][2 - y]
-                if d == 3:
-                    winner_1()
-                elif d == -3:
-                    winner_2()
 
-    # updating window to be able to see the changes that happened in each iteration
-    pygame.display.update()
+def main():
+    global run
+    while run:
+        insert()
+        # updating window to be able to see the changes that happened in each iteration
+        pygame.display.update()
+
+
+main()
